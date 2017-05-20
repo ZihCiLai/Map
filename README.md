@@ -1,5 +1,12 @@
 # Map
 ### Markit Framework
+MapKit框架提供了一個用於將地圖直接嵌入到您自己視圖中的方法。該框架還提供註釋地圖，添加覆蓋和執行反向地理編碼查找以確定給定地圖坐標的地標信息的支援。
+MapKit顯示您的自定義應用程序的視圖。用興趣點註釋您的地圖，並確定地圖坐標的地標信息。
+### CoreLocation Framework
+獲取設備的地理位置和方向。
+核心位置框架提供了確定設備相對於附近iBeacon的地理位置，高度，方向或位置的服務。該框架使用所有可用的硬體裝置，包括Wi-Fi，GPS，藍牙，磁力計，氣壓計和蜂窩硬件來收集數據。
+在請求許可並確定服務是否可用後，您將使用CLLocationManager對象啟動大多數服務，並在關聯的委託對像中接收結果。
+***
 * 授權; requestWhenInUseAuthorization:只有使用App時,才能取用位置。 requestAlwaysAuthorization: App永遠可以取用位置,包括於背景執行時 Apple建議,非必要請盡量使用requestWhenInUseAuthorization,以便於可以更加的維持User的隱私安全,若您的App沒有明顯的理由非用 requestAlwayAuthorization不可的話,送審時,也有可能會被Apple 給擋下來,要求您修改或者說明另外,此機制將需要配合在info.plist中加入額外的內容才行,至於選擇使用 NSLocationWheninUseUsage Description或者 NSLocationAlwaysUsageDescription,將需要搭配您程式碼中對於授權方式的選擇而定。iOS8時您務必要於取得授擅時,配合NSLocationWheninUseUsageDescription或者 NSLocationAlwaysUsageDescription到info.plist。
 * iOS10之後, Info.plist加上隱私的聲明敘述名稱改為: Privacy-Location Always 2, Usage Description或Privacy-Location When In Use Usage Description。
 * 若採用requestWhenInUseAuthorization的權限,讓App於背景執行時,會看到有提示,雖然出現此提示,並不代表您的App可以持續的於背景取用位置, iOS會於某個適當時機中止您App的位置回報,若您要開發長時間背景定位的App的話,建議使用 requestAlwaysAuthorization會比較妥當。
